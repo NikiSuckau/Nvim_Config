@@ -12,7 +12,9 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.colorscheme.nord-nvim" },
-
+  -- plugins
+  { import = "astrocommunity.markdown-and-latex.vimtex" },
+  { import = "astrocommunity.completion.copilot-lua" },
   -- language packages:
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
