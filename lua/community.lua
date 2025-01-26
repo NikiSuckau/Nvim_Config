@@ -15,6 +15,7 @@ return {
   -- plugins
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
   -- language packages:
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },

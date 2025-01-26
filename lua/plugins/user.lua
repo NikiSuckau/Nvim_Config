@@ -4,7 +4,9 @@
 -- Here are some examples:
 
 ---@type LazySpec
+---
 return {
+  --
   -- New plugins:
   {
     "Thiago4532/mdmath.nvim",
