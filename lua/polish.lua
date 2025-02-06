@@ -4,9 +4,6 @@
 -- things like custom filetypes. This is just pure lua so anything that doesn't
 -- fit in the normal config locations above can go here
 
--- Ensure Neovim uses the system clipboard with xclip
-vim.opt.clipboard = "unnamedplus"
-
 -- General settings
 vim.o.conceallevel = 2 -- Hide some characters for LaTeX
 
