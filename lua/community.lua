@@ -8,6 +8,7 @@
 return {
   "AstroNvim/astrocommunity",
   -- colorschemes:
+  { import = "astrocommunity.recipes.cache-colorscheme" },
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
@@ -17,7 +18,8 @@ return {
   { import = "astrocommunity.completion.cmp-spell" },
   { import = "astrocommunity.completion.cmp-latex-symbols" },
   -- code plugins
-  { import = "astrocommunity.completion.copilot-lua" },
+  -- { import = "astrocommunity.completion.copilot-lua" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.code-runner.compiler-nvim" },
   { import = "astrocommunity.code-runner.executor-nvim" },
   -- language packages:
@@ -25,5 +27,6 @@ return {
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.remote-development.remote-sshfs-nvim" },
   -- import/override with your plugins folder
 }
