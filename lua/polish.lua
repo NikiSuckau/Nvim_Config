@@ -1,5 +1,14 @@
 -- if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
+-- local map = vim.keymap.set
+--
+-- -- Use <Tab> to switch to the next buffer
+-- map("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
+--
+-- -- Use <S-Tab> (Shift+Tab) to switch to the previous buffer
+-- map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
+--
+-- unnamedplus for clipboard
+vim.o.clipboard = "unnamedplus"
 -- Ensure LaTeX settings remain intact
 vim.o.conceallevel = 2
 
@@ -17,3 +26,23 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.cmd "let g:tex_flavor = 'latex'"
   end,
 })
+
+local mappings = {
+  n = {
+    -- Use <Tab> for next buffer
+    ["<Tab>"] = {
+      function() require("astrocore.buffer").nav(vim.v.count1) end,
+      desc = "Next buffer",
+    },
+    -- Use <S-Tab> (Shift+Tab) for previous buffer
+    ["<S-Tab>"] = {
+      function() require("astrocore.buffer").nav(-vim.v.count1) end,
+      desc = "Previous buffer",
+    },
+    -- Optional: Disable ]b and [b
+    ["]b"] = false,
+    ["[b"] = false,
+  },
+}
+
+return mappings -- ✅ This must be the last line
