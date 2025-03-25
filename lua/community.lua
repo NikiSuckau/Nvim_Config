@@ -38,6 +38,7 @@ return {
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.remote-development.remote-sshfs-nvim" },
+  { import = "astrocommunity.pack.typescript-all-in-one" },
 
   -- import/override with your plugins folder
 }
