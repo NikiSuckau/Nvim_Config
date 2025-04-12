@@ -40,5 +40,9 @@ return {
   { import = "astrocommunity.remote-development.remote-sshfs-nvim" },
   { import = "astrocommunity.pack.typescript-all-in-one" },
 
+  -- Jupyter notebook
+  { import = "astrocommunity.media.image-nvim" },
+  { import = "astrocommunity.code-runner.molten-nvim" },
+
   -- import/override with your plugins folder
 }
