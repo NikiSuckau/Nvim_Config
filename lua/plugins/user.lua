@@ -16,6 +16,15 @@ return {
     },
   },
 
+  {
+    "zbirenbaum/copilot.lua",
+    opts = {
+      filetypes = {
+        markdown = true, -- ✅ allow Copilot in markdown
+      },
+    },
+  },
+
   -- New Plugins
   {
     "Thiago4532/mdmath.nvim",
@@ -25,10 +34,11 @@ return {
     opts = {
       filetypes = { "markdown" },
       foreground = "Normal",
+      -- foreground = "#ff0000",
       anticonceal = true,
-      hide_on_insert = true,
+      hide_on_insert = false,
       dynamic = true,
-      dynamic_scale = 1.0,
+      dynamic_scale = 0.65,
       update_interval = 400,
       internal_scale = 1.0,
     },
