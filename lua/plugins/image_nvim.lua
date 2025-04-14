@@ -1,12 +1,11 @@
 -- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 --@type LazySpec
 return {
-  -- use mason-lspconfig to configure LSP installations
   {
     "3rd/image.nvim",
-    -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
       backend = "kitty", -- whatever backend you would like to use
+      -- processor = "magick_cli", -- or "magick_cli"
       max_width = 100,
       max_height = 12,
       max_height_window_percentage = math.huge,

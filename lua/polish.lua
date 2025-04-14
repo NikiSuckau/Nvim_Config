@@ -1,17 +1,11 @@
 -- if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 -- local map = vim.keymap.set
 --
--- -- Use <Tab> to switch to the next buffer
--- map("n", "<Tab>", ":bnext<CR>", { desc = "Next buffer" })
---
--- -- Use <S-Tab> (Shift+Tab) to switch to the previous buffer
--- map("n", "<S-Tab>", ":bprevious<CR>", { desc = "Previous buffer" })
 --
 -- unnamedplus for clipboard
 vim.o.clipboard = "unnamedplus"
 -- Ensure LaTeX settings remain intact
 vim.o.conceallevel = 2
-
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "tex",
   callback = function()
