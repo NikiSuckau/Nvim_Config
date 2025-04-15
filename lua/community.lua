@@ -44,5 +44,6 @@ return {
   { import = "astrocommunity.media.image-nvim" },
   { import = "astrocommunity.code-runner.molten-nvim" },
 
-  -- import/override with your plugins folder
+  -- To make the config work in VScode
+  { import = "astrocommunity.recipes.vscode" },
 }

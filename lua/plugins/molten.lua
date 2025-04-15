@@ -7,9 +7,8 @@ return {
   -- Optionally, you could add a key for lazy-loading if needed
   -- event = "VeryLazy",
   config = function()
-    -- -- Adjust virtual text to show just below the cell delimiter
-    vim.g.molten_virt_lines_off_by_1 = true
-    -- -- You can set other molten options here if desired.
+    -- I find auto open annoying, keep in mind setting this option will require setting
+    -- a keybind for `:noautocmd MoltenEnterOutput` to open the output again
     vim.g.molten_auto_open_output = false
 
     -- this guide will be using image.nvim
@@ -24,7 +23,15 @@ return {
     vim.g.molten_virt_text_output = true
 
     -- this will make it so the output shows up below the \`\`\` cell delimiter
-    vim.g.molten_virt_lines_off_by_1 = true
-    vim.g.molten_image_location = "both"
+    -- vim.g.molten_virt_lines_off_by_1 = true
+    -- this one was bad for images
+    vim.g.molten_virt_lines_off_by_1 = false
+
+    vim.g.molten_cover_empty_lines = true
+    -- vim.g.molten_image_location = "virt" -- "virt", "float", "both"
+    -- lets see if this works
+    vim.g.molten_output_virt_lines = true
+
+    vim.g.molten_output_win_hide_on_leave = false
   end,
 }
