@@ -4,6 +4,8 @@
 --
 -- unnamedplus for clipboard
 vim.o.clipboard = "unnamedplus"
+
+vim.wo.wrap = true
 -- Ensure LaTeX settings remain intact
 vim.o.conceallevel = 2
 vim.api.nvim_create_autocmd("FileType", {
