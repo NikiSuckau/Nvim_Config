@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -36,7 +36,8 @@ return {
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- {vim.g.python3_host_prog=vim.fn.expand("~/.virtualenvs/neovim/bin/python3")}
-        python3_host_prog = vim.fn.expand "~/.virtualenvs/neovim/bin/python3",
+        python3_host_prog = vim.fn.expand "/home/niki/.virtualenvs/neovim/bin/python3",
+        -- python3_host_prog = vim.fn.expand "/root/.virtualenvs/neovim/bin/python3",
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
       },
