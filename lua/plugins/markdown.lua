@@ -163,7 +163,12 @@ return {
   {
     "chrisgrieser/nvim-various-textobjs", -- additional text objects
     lazy = false,
-    opts = { useDefaultKeymaps = true },
+    -- opts = { useDefaultKeymaps = true },
+    opts = {
+      keymaps = {
+        useDefaults = true,
+      },
+    },
   },
   -- ###########################################################################
 }
