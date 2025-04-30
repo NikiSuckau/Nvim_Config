@@ -1,7 +1,7 @@
 -- Remove or comment out the early return:
 -- if true then return {} end -- REMOVE THIS LINE
 
---@type LazySpec
+---@type LazySpec
 return {
   "benlubas/molten-nvim",
   -- Optionally, you could add a key for lazy-loading if needed

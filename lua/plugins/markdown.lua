@@ -1,7 +1,7 @@
 -- Remove or comment out the early return:
 -- if true then return {} end -- REMOVE THIS LINE
 
---@type LazySpec
+---@type LazySpec
 return {
   {
     "iamcco/markdown-preview.nvim", -- live preview markdown in browser
@@ -47,11 +47,14 @@ return {
       win_options = {
         conceallevel = {
           default = 2,
+          -- default = 0,
           rendered = 2,
+          -- rendered = 0,
         },
       },
       bullet = {
-        enabled = true,
+        enabled = false,
+        -- enabled = false,
         -- Replaces '-'|'+'|'*' of 'list_item'
         -- How deeply nested the list is determines the 'level'
         -- The 'level' is used to index into the array using a cycle
@@ -65,13 +68,13 @@ return {
         highlight = "RenderMarkdownBullet",
       },
       link = {
-        enabled = false,
+        enabled = true,
       },
       heading = {
         -- Turn on / off heading icon & background rendering
         enabled = true,
         -- Turn on / off any sign column related rendering
-        sign = false,
+        sign = true,
         -- Replaces '#+' of 'atx_h._marker'
         -- The number of '#' in the heading determines the 'level'
         -- The 'level' is used to index into the array using a cycle
@@ -86,14 +89,14 @@ return {
         width = "block",
         left_pad = 0,
         right_pad = 1,
-        -- backgrounds = {
-        --   "RenderMarkdownH1Bg",
-        --   "RenderMarkdownH2Bg",
-        --   "RenderMarkdownH3Bg",
-        --   "RenderMarkdownH4Bg",
-        --   "RenderMarkdownH5Bg",
-        --   "RenderMarkdownH6Bg",
-        -- },
+        backgrounds = {
+          "RenderMarkdownH1Bg",
+          "RenderMarkdownH2Bg",
+          "RenderMarkdownH3Bg",
+          "RenderMarkdownH4Bg",
+          "RenderMarkdownH5Bg",
+          "RenderMarkdownH6Bg",
+        },
         foregrounds = {
           "RenderMarkdownH1",
           "RenderMarkdownH2",
@@ -163,7 +166,12 @@ return {
   {
     "chrisgrieser/nvim-various-textobjs", -- additional text objects
     lazy = false,
-    opts = { useDefaultKeymaps = true },
+    -- opts = { useDefaultKeymaps = true },
+    opts = {
+      keymaps = {
+        useDefaults = true,
+      },
+    },
   },
   -- ###########################################################################
 }

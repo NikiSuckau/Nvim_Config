@@ -23,18 +23,19 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.cmd "highlight Folded guibg=#1a1b32"
+
 -- hide Markdown links
 vim.opt.conceallevel = 2
 vim.opt.foldlevel = 2
--- markdown colors
--- vim.cmd "highlight RenderMarkdownH1Bg guifg=#80ffff guibg=#444444"
--- vim.cmd "highlight RenderMarkdownH2Bg guifg=#80ff00 guibg=#444444"
--- vim.cmd "highlight RenderMarkdownH3Bg guifg=#ffff80 guibg=#444444"
-vim.cmd "highlight RenderMarkdownH1Bg guifg=#ff7f00 guibg=#444444 "
-vim.cmd "highlight RenderMarkdownH2Bg guifg=#80ff00 guibg=#444444"
-vim.cmd "highlight RenderMarkdownH3Bg guifg=#ccccff guibg=#444444"
-vim.cmd "highlight RenderMarkdownCode guibg=#373750"
-vim.cmd "highlight RenderMarkdownCodeInline guifg=#ffffff"
+vim.cmd "highlight RenderMarkdownH1Bg guifg=#f7768e guibg=#1a1b26"
+vim.cmd "highlight RenderMarkdownH2Bg guifg=#ff9e64 guibg=#1a1b26"
+vim.cmd "highlight RenderMarkdownH3Bg guifg=#9ece6a guibg=#1a1b26"
+vim.cmd "highlight RenderMarkdownH4Bg guifg=#7aa2f7 guibg=#1a1b26"
+vim.cmd "highlight RenderMarkdownH5Bg guifg=#bb9af7 guibg=#1a1b26"
+vim.cmd "highlight RenderMarkdownH6Bg guifg=#2ac3de guibg=#1a1b26"
+vim.cmd "highlight RenderMarkdownCode guibg=#1a1b40"
+vim.cmd "highlight RenderMarkdownCodeInline guibg=#1a1b40" -- guifg=#ffffff"
 local NS = { noremap = true, silent = true }
 vim.keymap.set("n", "<leader>mh", "<cmd>MoltenHideOutput<cr>", NS)
 vim.keymap.set("n", "<leader>mo", "<cmd>noautocmd MoltenEnterOutput<cr>", NS)

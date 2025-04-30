@@ -22,17 +22,19 @@ return {
   { import = "astrocommunity.colorscheme.night-owl-nvim" },
   { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
   -- writing plugins
+  { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
   { import = "astrocommunity.completion.cmp-spell" },
-  { import = "astrocommunity.completion.cmp-latex-symbols" },
+  -- { import = "astrocommunity.completion.cmp-latex-symbols" },
   -- code plugins
   -- { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- { import = "astrocommunity.code-runner.compiler-nvim" },
   -- { import = "astrocommunity.code-runner.executor-nvim" },
   -- { import = "astrocommunity.code-runner.toggletasks-nvim" },
-  { import = "astrocommunity.code-runner.overseer-nvim" },
-  -- language packages:
+  -- { import = "astrocommunity.code-runner.overseer-nvim" },
+  { import = "astrocommunity.completion.avante-nvim" },
+  -- language packages
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.cpp" },

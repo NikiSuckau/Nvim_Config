@@ -15,6 +15,11 @@ return {
             function() require("astrocore.buffer").nav(vim.v.count1) end,
             desc = "Next buffer",
           },
+          -- Add Vimtex compile mapping
+          ["<leader>Lc"] = {
+            function() vim.cmd "VimtexCompile" end,
+            desc = "Compile LaTeX file",
+          },
         },
       },
     },
