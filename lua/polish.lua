@@ -8,20 +8,29 @@ vim.o.clipboard = "unnamedplus"
 vim.wo.wrap = true
 -- Ensure LaTeX settings remain intact
 vim.o.conceallevel = 2
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "tex",
-  callback = function()
-    vim.wo.wrap = true
-    vim.wo.linebreak = true
-    vim.wo.conceallevel = 2
-    vim.wo.concealcursor = "n"
-    vim.bo.textwidth = 140
-    vim.bo.shiftwidth = 2
-    vim.bo.expandtab = true
-    vim.cmd "set list listchars=precedes:<,extends:>"
-    vim.cmd "let g:tex_flavor = 'latex'"
-  end,
-})
+-- -- Your FileType tex autocmd for settings
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "tex",
+--   callback = function()
+--     vim.wo.wrap = true
+--     vim.wo.linebreak = true
+--     vim.wo.conceallevel = 2
+--     vim.wo.concealcursor = "n"
+--     vim.bo.textwidth = 140
+--     vim.bo.shiftwidth = 2
+--     vim.bo.expandtab = true
+--     vim.cmd "set list listchars=precedes:<,extends:>"
+--     vim.cmd "let g:tex_flavor = 'latex'"
+--     vim.cmd "let g:tex_conceal = 'abdmg'"
+--     vim.cmd "TSBufDisable highlight"
+--     vim.cmd "setlocal spell spelllang=en_us"
+--     -- Auto-save on InsertLeave *just for .tex buffers*
+--     vim.api.nvim_create_autocmd("InsertLeave", {
+--       buffer = 0, -- only for the current buffer
+--       callback = function() vim.cmd "silent! write" end,
+--     })
+--   end,
+-- })
 
 vim.cmd "highlight Folded guibg=#1a1b32"
 

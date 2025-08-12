@@ -18,9 +18,11 @@ return {
 
   {
     "zbirenbaum/copilot.lua",
+    event = "InsertEnter", -- 🚀 only start Copilot when you enter Insert mode
     opts = {
       filetypes = {
         markdown = true, -- ✅ allow Copilot in markdown
+        tex = true, -- ✅ enable for LaTeX
       },
     },
   },

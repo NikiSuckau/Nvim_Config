@@ -20,6 +20,11 @@ return {
             function() vim.cmd "VimtexCompile" end,
             desc = "Compile LaTeX file",
           },
+          -- New chat for Avante by cmd AvanteChatNew
+          ["<leader>An"] = {
+            function() vim.cmd "AvanteChatNew" end,
+            desc = "New Avante chat",
+          },
         },
       },
     },
