@@ -1,5 +1,5 @@
 -- Remove or comment out the early return:
--- if true then return {} end -- REMOVE THIS LINE
+if true then return {} end -- REMOVE THIS LINE
 
 ---@type LazySpec
 return {

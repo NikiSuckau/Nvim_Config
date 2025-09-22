@@ -25,6 +25,26 @@ return {
             function() vim.cmd "AvanteChatNew" end,
             desc = "New Avante chat",
           },
+          ["<leader>rp"] = {
+            function()
+              local buf_name = vim.api.nvim_buf_get_name(0)
+              if buf_name == "" then
+                vim.notify("No file name for current buffer", vim.log.levels.ERROR)
+                return
+              end
+              local term_cmd = "python " .. buf_name
+              require("toggleterm.terminal").Terminal
+                :new({
+                  direction = "vertical",
+                  size = vim.o.columns / 2,
+                  cmd = term_cmd,
+                  close_on_exit = false,
+                  on_open = function(term) term:send(term_cmd, true) end,
+                })
+                :toggle()
+            end,
+            desc = "Run Python file in vertical ToggleTerm",
+          },
         },
       },
     },

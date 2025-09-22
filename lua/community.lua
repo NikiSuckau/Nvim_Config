@@ -21,6 +21,8 @@ return {
   { import = "astrocommunity.colorscheme.neosolarized-nvim" },
   { import = "astrocommunity.colorscheme.night-owl-nvim" },
   { import = "astrocommunity.colorscheme.solarized-osaka-nvim" },
+  { import = "astrocommunity.colorscheme.onedarkpro-nvim" },
+  { import = "astrocommunity.colorscheme.oxocarbon-nvim" },
   -- writing plugins
   { import = "astrocommunity.note-taking.obsidian-nvim" },
   { import = "astrocommunity.markdown-and-latex.vimtex" },
@@ -43,8 +45,8 @@ return {
   { import = "astrocommunity.pack.typescript-all-in-one" },
 
   -- Jupyter notebook
-  { import = "astrocommunity.media.image-nvim" },
-  { import = "astrocommunity.code-runner.molten-nvim" },
+  -- { import = "astrocommunity.media.image-nvim" },
+  -- { import = "astrocommunity.code-runner.molten-nvim" },
 
   -- To make the config work in VScode
   { import = "astrocommunity.recipes.vscode" },
